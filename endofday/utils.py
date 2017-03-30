@@ -1,7 +1,8 @@
 import datetime
 import math
 
-def main():
+
+def eod():
     """Calculate the minutes until the end of the day"""
     # Get the difference between now and the end of the day
     now = datetime.datetime.now()
@@ -11,6 +12,3 @@ def main():
     minutes = float(diff.seconds) / 60.0
     # Round up and return without fractions
     print "%d" % math.ceil(minutes)
-
-if __name__ == '__main__':
-    main()
