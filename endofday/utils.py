@@ -4,7 +4,7 @@ import math
 
 def eod(dt=None):
     """Calculate the minutes until the end of the day"""
-    # Get the difference between now and the end of the day
+    # Get the difference between dt and the end of the day
     if dt is None:
         dt = datetime.datetime.now()
     eod = datetime.datetime.now().replace(hour=17, minute=30, second=00)

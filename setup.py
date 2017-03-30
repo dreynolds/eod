@@ -1,6 +1,10 @@
+import os
+
 from distutils.core import setup
 from distutils.cmd import Command
 from distutils.core import setup
+
+here = os.path.abspath(os.path.dirname(__file__))
 
 
 class TestCommand(Command):
@@ -28,7 +32,7 @@ setup(
     packages=['endofday', 'endofday.tests'],
     scripts=['bin/eod', ],
     license='LICENSE.txt',
-    long_description=open('README.md').read(),
+    long_description=open(os.path.join(here, 'README.txt')).read(),
     cmdclass={
         'test': TestCommand,
     }
